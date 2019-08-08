@@ -1,0 +1,619 @@
+/* Add a gray background color with some padding */
+
+@font-face {
+  font-family: ForHeader;
+  src: url(./dist/fonts/Infra-Bold.otf);
+}
+
+@font-face {
+  font-family: ForBody;
+  src: url(./dist/fonts/Infra-Light.otf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: ForHeader;
+}
+
+a {
+  color: #440;
+}
+
+a:hover, a:active {
+  color: #446;
+}
+
+.upspacer {
+  padding-top: 56px;
+}
+
+body {
+  font-family: ForBody;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #eee;
+}
+
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 18px;
+}
+
+.contain {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+/* Header/Blog Title */
+
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-color: #ffffffd0;
+  color: #0c0c0e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #445;
+}
+
+/* Create two unequal columns that floats next to each other */
+
+/* Left column */
+
+.leftcolumn {
+  float: left;
+  width: 70%;
+}
+
+/* Right column */
+
+.rightcolumn {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 1rem;
+  float: left;
+  width: 30%;
+}
+
+/* Fake image */
+
+.fakeimg {
+  background-color: #aaa;
+  border-radius: 5px;
+  width: 100%;
+  height: 75px;
+  max-height: 75px;
+  justify-content: center;
+  padding: 10px;
+}
+
+img {
+  background-color: #aaa;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+}
+
+/* Add a card effect for articles */
+
+/* .card {
+  background-color: white;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  margin-top: 20px;
+} */
+
+.aboutcard {
+  background-color: white;
+  box-shadow: 3px 5px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.flexspacer {
+  display: flex;
+  flex-direction: left;
+}
+
+.spacer {
+  flex: 1;
+}
+
+/* Clear floats after the columns */
+
+.row:after {
+  content: "";
+  display: flex;
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ffffffd0;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+  color: #6b6b6b;
+  margin-top: 20px;
+}
+
+.copyright {
+  background: #6b6b6b;
+  color: #ffffffd0;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.footer ul li {
+  display: block;
+  padding: 0 0.5rem;
+}
+
+/* For desktop: */
+
+.col-1 {
+  float: left;
+  width: 8.33%;
+}
+
+.col-2 {
+  float: left;
+  width: 16.66%;
+}
+
+.col-3 {
+  float: left;
+  width: 25%;
+}
+
+.col-4 {
+  float: left;
+  width: 33.33%;
+}
+
+.col-5 {
+  float: left;
+  width: 41.66%;
+}
+
+.col-6 {
+  float: left;
+  width: 50%;
+}
+
+.col-7 {
+  float: left;
+  width: 58.33%;
+}
+
+.col-8 {
+  float: left;
+  width: 66.66%;
+}
+
+.col-9 {
+  float: left;
+  width: 75%;
+}
+
+.col-10 {
+  float: left;
+  width: 83.33%;
+}
+
+.col-11 {
+  float: left;
+  width: 91.66%;
+}
+
+.col-12 {
+  float: left;
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    padding: 0 8px;
+    width: 100%;
+  }
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.colortuner {
+  color: #979797;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+select option {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #445;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.greenbtn {
+  background-color: white;
+  color: #444;
+  border: 2px solid #4caf50;
+}
+
+.greenbtn:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+.bluebtn {
+  background-color: white;
+  color: #444;
+  border: 2px solid #008cba;
+}
+
+.bluebtn:hover {
+  background-color: #008cba;
+  color: white;
+}
+
+.redbtn {
+  background-color: white;
+  color: #444;
+  border: 2px solid #f44336;
+}
+
+.redbtn:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.graybtn {
+  background-color: white;
+  color: #444;
+  border: 2px solid #e7e7e7;
+}
+
+.graybtn:hover {
+  background-color: #e7e7e7;
+}
+
+.blackbtn {
+  background-color: white;
+  color: #444;
+  border: 2px solid #555555;
+}
+
+.blackbtn:hover {
+  background-color: #555555;
+  color: white;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: #444;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #ddddddab;
+  transition: background-color 0.3s;
+}
+
+ul.pagination li a.active {
+  background-color: #446 !important;
+  color: white !important;
+  border: 1px solid #446;
+}
+
+ul.pagination li a:hover:not(.active) {
+  background-color: #b9b6b6 !important;
+}
+
+div.center {
+  text-align: center;
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 30px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+i.fab, i.fas {
+  margin: 0.5rem;
+}
+
+/* The switch - the box around the slider */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+  display: none;
+}
+
+/* The slider */
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #105c9b;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+pre {
+  overflow: auto;
+  font-size: 15px;
+  background: #c2c2c2;
+  color: #3a3d42;
+  padding: 10px;
+  border-radius: 5px;
+}
