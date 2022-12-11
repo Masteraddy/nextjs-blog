@@ -12,7 +12,7 @@
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "draft-js": "^0.11.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "isomorphic-unfetch": "^3.0.0",
     "jodit-react": "^1.0.26",
     "jsonwebtoken": "^8.5.1",
